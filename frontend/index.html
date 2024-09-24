@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Portfolio IH</title>
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+    <!-- Header with Navigation -->
+    <header>
+        <nav>
+            <ul>
+                <li class="btn"><a href="#hero">Inicio</a></li>
+                <li class="btn"><a href="#about">Acerca de Mí</a></li>
+                <li class="btn"><a href="#projects">Proyectos</a></li>
+                <li class="btn"><a href="#contact">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section">
+        <div class="hero-content">
+            <h1>Hola, Yo soy <span class="highlight">Ivan Dario Herrera Betancourt</span></h1>
+            <p>Un Desarrollador Web Apasionado especializado en la creación moderna de aplicaciones.</p>
+            <a href="#about" class="btn">Mas Acerca de Mí</a>
+            
+        </div>
+        
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <h2>Acerca de Mi</h2>
+            <div class="about-content">
+                <div class="project-card">
+                    <p>I am passionate about building efficient and scalable web applications using HTML, CSS, JavaScript, Node.js, and MongoDB.</p>
+                </div>
+                <div class="project-card">
+                    <p>I am passionate about building efficient and scalable web applications using HTML, CSS, JavaScript, Node.js, and MongoDB.</p>
+                </div>
+                <div class="about-photo">
+                    <img src="./assets/ivanH.jpeg" alt="Foto Perfil">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects-section">
+        <div class="container">
+            <h2>My Projects</h2>
+            <div class="project-grid">
+                <!-- Example Project -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="assets/huella.jpg" alt="Project 1">
+                    </div>
+                    <div class="project-info">
+                        <h3>Project Name 1</h3>
+                        <p>Brief description of the project and the technologies used.</p>
+                        <a href="usuario.html" class="btn">See More</a>
+                    </div>
+                </div>
+                <!-- Example Project -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="assets/project2.jpg" alt="Project 2">
+                    </div>
+                    <div class="project-info">
+                        <h3>Project Name 2</h3>
+                        <p>Another project description with relevant tech stack.</p>
+                        <a href="project-page.html" class="btn">See More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer with Contact Form -->
+    <footer id="contact" class="contact-section">
+        <h2>Contactame</h2>
+            <div>
+                <div>
+                    <img src="assets/logoIH.png" alt="Foto Perfil">
+                </div>
+                <div class="project-info">
+                    <form id="contact-form">
+                        <label for="name">Nombre:</label>
+                        <input type="text" id="name" name="name" autocomplete="name" required>
+                        
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" autocomplete="email" required>
+            
+                        <label for="message">Mensaje:</label>
+                        <textarea id="message" name="message" autocomplete="off" required></textarea>
+                        
+                        <button type="submit">Enviar</button>
+                    </form>
+                </div>
+            </div>
+        
+        
+    </footer>
+
+    <script src="./js/scripts.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Reservas</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+    <div class="flex flex-col md:flex-row min-h-screen">
+        <div class="md:w-1/2 bg-white p-8">
+            <h2 class="text-3xl font-bold mb-6">Sistema de Reservas</h2>
+            <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" alt="Sistema de Reservas" class="w-full h-64 object-cover rounded-lg mb-6">
+            <p class="mb-6">Bienvenido a nuestro sistema de reservas. Aquí podrás agendar citas con nuestros profesionales de manera fácil y rápida.</p>
+            <form class="space-y-4">
+                <div>
+                    <label for="service" class="block mb-2 font-medium">Servicio Profesional</label>
+                    <select id="service" class="w-full p-2 border rounded">
+                        <option>Seleccione un servicio</option>
+                        <option>Consulta Médica</option>
+                        <option>Asesoría Legal</option>
+                        <option>Terapia Psicológica</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="professional" class="block mb-2 font-medium">Profesional</label>
+                    <select id="professional" class="w-full p-2 border rounded">
+                        <option>Seleccione un profesional</option>
+                        <option>Dr. García</option>
+                        <option>Lic. Rodríguez</option>
+                        <option>Psic. Martínez</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="date" class="block mb-2 font-medium">Fecha</label>
+                    <input type="date" id="date" class="w-full p-2 border rounded">
+                </div>
+                <div>
+                    <label for="time" class="block mb-2 font-medium">Hora</label>
+                    <select id="time" class="w-full p-2 border rounded">
+                        <option>Seleccione una hora</option>
+                        <option>09:00</option>
+                        <option>10:00</option>
+                        <option>11:00</option>
+                        <option>12:00</option>
+                        <option>16:00</option>
+                        <option>17:00</option>
+                    </select>
+                </div>
+                <button type="submit" class="w-full bg-blue-500 text-white p-2 rounded hover:bg-blue-600 transition duration-300">Reservar</button>
+            </form>
+        </div>
+        <div class="md:w-1/2 bg-gray-200 p-8">
+            <div class="max-w-md mx-auto">
+                <h2 class="text-3xl font-bold mb-6">Iniciar Sesión</h2>
+                <form class="space-y-4">
+                    <div>
+                        <label for="email" class="block mb-2 font-medium">Correo Electrónico</label>
+                        <input type="email" id="email" required class="w-full p-2 border rounded">
+                    </div>
+                    <div>
+                        <label for="password" class="block mb-2 font-medium">Contraseña</label>
+                        <input type="password" id="password" required class="w-full p-2 border rounded">
+                    </div>
+                    <button type="submit" class="w-full bg-green-500 text-white p-2 rounded hover:bg-green-600 transition duration-300">Iniciar Sesión</button>
+                </form>
+                <div class="mt-8">
+                    <h3 class="text-xl font-bold mb-4">Registrarse</h3>
+                    <form class="space-y-4">
+                        <div>
+                            <label for="reg-email" class="block mb-2 font-medium">Correo Electrónico</label>
+                            <input type="email" id="reg-email" required class="w-full p-2 border rounded">
+                        </div>
+                        <div>
+                            <label for="reg-password" class="block mb-2 font-medium">Contraseña</label>
+                            <input type="password" id="reg-password" required class="w-full p-2 border rounded">
+                        </div>
+                        <div>
+                            <label for="confirm-password" class="block mb-2 font-medium">Confirmar Contraseña</label>
+                            <input type="password" id="confirm-password" required class="w-full p-2 border rounded">
+                        </div>
+                        <button type="submit" class="w-full bg-purple-500 text-white p-2 rounded hover:bg-purple-600 transition duration-300">Registrarse</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.getElementById('professional').addEventListener('change', function() {
+            const dateInput = document.getElementById('date');
+            dateInput.min = new Date().toISOString().split('T')[0];
+            dateInput.value = '';
+        });
+
+        document.getElementById('date').addEventListener('change', function() {
+            const timeSelect = document.getElementById('time');
+            timeSelect.innerHTML = '<option>Seleccione una hora</option>';
+            const hours = ['09:00', '10:00', '11:00', '12:00', '16:00', '17:00'];
+            hours.forEach(hour => {
+                const option = document.createElement('option');
+                option.value = hour;
+                option.textContent = hour;
+                timeSelect.appendChild(option);
+            });
+        });
+    </script>
+</body>
+</html>

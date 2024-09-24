@@ -1,0 +1,23 @@
+<!-- frontend/reserva.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Reservas</title>
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Reserva un Servicio</h1>
+        <form id="reservation-form">
+            <input type="text" name="usuario_id" placeholder="ID de Usuario" required>
+            <input type="text" name="servicio_id" placeholder="ID de Servicio" required>
+            <input type="datetime-local" name="fecha_reserva" required>
+            <textarea name="notas" placeholder="Notas adicionales"></textarea>
+            <button type="submit">Reservar</button>
+        </form>
+    </div>
+    <script src="./js/scriptsReserva.js"></script>
+</body>
+</html>
