@@ -8,16 +8,51 @@
     <link rel="stylesheet" href="./css/styles.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Reserva un Servicio</h1>
-        <form id="reservation-form">
-            <input type="text" name="usuario_id" placeholder="ID de Usuario" required>
-            <input type="text" name="servicio_id" placeholder="ID de Servicio" required>
-            <input type="datetime-local" name="fecha_reserva" required>
-            <textarea name="notas" placeholder="Notas adicionales"></textarea>
-            <button type="submit">Reservar</button>
-        </form>
+    <div class="form-container">
+        <h2>Reserva un Servicio</h2>
+        <form id="reservation-form" >
+            <input type="email" name="email" placeholder="Correo electrónico" required>
+            <label for="service">Servicio Profesional</label>
+            <select id="service">
+                <option value="" disabled selected>Selecciona un servicio</option>
+                <option >Consulta Médica</option>
+                <option >Asesoría Legal</option>
+                <option >Terapia Psicológica</option>
+            </select>
+       
+            <label for="professional" class="block mb-2 font-medium">Profesional</label>
+            <select id="professional" class="w-full p-2 border rounded">
+                <option>Seleccione un profesional</option>
+                <option >Dr. García</option>
+                <option >Lic. Rodríguez</option>
+                <option >Psic. Martínez</option>
+            </select>
+                
+            <label for="date" class="block mb-2 font-medium">Fecha</label>
+            <input type="date" id="date" class="w-full p-2 border rounded">
+       
+            <label for="time" class="block mb-2 font-medium">Hora</label>
+            <select id="time" class="w-full p-2 border rounded">
+                <option>Seleccione una hora</option>
+                <option>09:00</option>
+                <option>10:00</option>
+                <option>11:00</option>
+                <option>12:00</option>
+                <option>14:00</option>
+                <option>15:00</option>
+                <option>16:00</option>
+                <option>17:00</option>
+                <option>18:00</option>
+            </select>
+        
+        <button type="submit">Reservar</button>
+    </form>
+    <div class="form-footer"></div>
+        <a href="">¿Ya tienes cuenta? Inicia sesión</a>
+    
+        <a href="./usuario.html">Registrarse</a>
     </div>
+</div>
     <script src="./js/scriptsReserva.js"></script>
 </body>
 </html>

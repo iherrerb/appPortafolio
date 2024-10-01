@@ -1,11 +1,15 @@
+
+
 document.getElementById('reservation-form').addEventListener('submit', async (e) => {
     e.preventDefault();
-
+   
+    
     const data = {
-        usuario_id: e.target.usuario_id.value,
-        servicio_id: e.target.servicio_id.value,
-        fecha_reserva: e.target.fecha_reserva.value,
-        notas: e.target.notas.value,
+        email: e.target.email.value,
+        service: e.target.service.value,
+        professional: e.target.professional.value,
+        date: e.target.date.value,
+        time: e.target.time.value,
     };
 
     const response = await fetch('http://localhost:3000/reservations', {

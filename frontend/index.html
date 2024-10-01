@@ -5,105 +5,117 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Portfolio IH</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="./css/styles.css">
 </head>
 <body>
     <!-- Header with Navigation -->
     <header>
-        <nav>
-            <ul>
-                <li class="btn"><a href="#hero">Inicio</a></li>
-                <li class="btn"><a href="#about">Acerca de Mí</a></li>
-                <li class="btn"><a href="#projects">Proyectos</a></li>
-                <li class="btn"><a href="#contact">Contacto</a></li>
+        <nav class="navbar-container ">
+            <ul class="navbar">
+                <li ><a href="#hero">Inicio</a></li>
+                <li ><a href="#about">Habilidades</a></li>
+                <li ><a href="#projects">Proyectos</a></li>
+                <li ><a href="#contact">Contacto</a></li>
             </ul>
         </nav>
     </header>
 
     <!-- Hero Section -->
+    <div class="parallax-bg"></div>
+    <!-- Hero Section -->
     <section id="hero" class="hero-section">
         <div class="hero-content">
             <h1>Hola, Yo soy <span class="highlight">Ivan Dario Herrera Betancourt</span></h1>
-            <p>Un Desarrollador Web Apasionado especializado en la creación moderna de aplicaciones.</p>
-            <a href="#about" class="btn">Mas Acerca de Mí</a>
-            
-        </div>
+            <p>Desarrollador Web Apasionado y especializado en la creación moderna de aplicaciones.</p>
+         </div>
+    </section>
+
+<!-- About Section -->
+<section id="about" class="skills-section">
+    <div>
+        <h2 class="titulos">Habilidades</h2>
+    </div>
+    <div class="skills-container">
         
-    </section>
-
-    <!-- About Me Section -->
-    <section id="about" class="about-section">
-        <div class="container">
-            <h2>Acerca de Mi</h2>
-            <div class="about-content">
-                <div class="project-card">
-                    <p>I am passionate about building efficient and scalable web applications using HTML, CSS, JavaScript, Node.js, and MongoDB.</p>
-                </div>
-                <div class="project-card">
-                    <p>I am passionate about building efficient and scalable web applications using HTML, CSS, JavaScript, Node.js, and MongoDB.</p>
-                </div>
-                <div class="about-photo">
-                    <img src="./assets/ivanH.jpeg" alt="Foto Perfil">
-                </div>
-            </div>
+        <div class="skill-card">
+            <i class="fab fa-html5"></i>
+            <h3>HTML5</h3>
+            <p>Desarrollo web estructurado y accesible.</p>
         </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects" class="projects-section">
-        <div class="container">
-            <h2>My Projects</h2>
-            <div class="project-grid">
-                <!-- Example Project -->
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="assets/huella.jpg" alt="Project 1">
-                    </div>
-                    <div class="project-info">
-                        <h3>Project Name 1</h3>
-                        <p>Brief description of the project and the technologies used.</p>
-                        <a href="usuario.html" class="btn">See More</a>
-                    </div>
-                </div>
-                <!-- Example Project -->
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="assets/project2.jpg" alt="Project 2">
-                    </div>
-                    <div class="project-info">
-                        <h3>Project Name 2</h3>
-                        <p>Another project description with relevant tech stack.</p>
-                        <a href="project-page.html" class="btn">See More</a>
-                    </div>
-                </div>
-            </div>
+        <div class="skill-card">
+            <i class="fab fa-css3-alt"></i>
+            <h3>CSS3</h3>
+            <p>Estilos y diseño moderno, responsivo.</p>
         </div>
-    </section>
-
-    <!-- Footer with Contact Form -->
-    <footer id="contact" class="contact-section">
-        <h2>Contactame</h2>
-            <div>
-                <div>
-                    <img src="assets/logoIH.png" alt="Foto Perfil">
+        <div class="skill-card">
+            <i class="fab fa-js"></i>
+            <h3>JavaScript</h3>
+            <p>Interactividad y dinamismo en páginas web.</p>
+        </div>
+        <div class="skill-card">
+            <i class="fab fa-react"></i>
+            <h3>React</h3>
+            <p>Componentes reutilizables y SPA.</p>
+        </div>
+        <div class="skill-card">
+            <i class="fab fa-node-js"></i>
+            <h3>Node.js</h3>
+            <p>Desarrollo de Back-End eficiente.</p>
+        </div>
+    </div>
+</section>
+<!-- Projects Section -->
+<section id="projects" class="projects-section">
+    <div class="container">
+        <div>
+            <h2 class="titulos">Proyectos</h2>
+            
+       </div>
+        <div class="project-grid">
+            <!-- Project 1 -->
+            <div class="project-card">
+                <h3>Reserva de Servicios de Salud</h3>
+                <div class="project-image">
+                    <img src="assets/reservas3.png" alt="Project 1">
                 </div>
                 <div class="project-info">
-                    <form id="contact-form">
-                        <label for="name">Nombre:</label>
-                        <input type="text" id="name" name="name" autocomplete="name" required>
-                        
-                        <label for="email">Email:</label>
-                        <input type="email" id="email" name="email" autocomplete="email" required>
-            
-                        <label for="message">Mensaje:</label>
-                        <textarea id="message" name="message" autocomplete="off" required></textarea>
-                        
-                        <button type="submit">Enviar</button>
-                    </form>
+                   <a href="reserva.html" class="btn">Ver Más...</a>
                 </div>
             </div>
-        
-        
+            <!-- Project 2 -->
+            <div class="project-card">
+                <h3>Proyecto de Investigación</h3>
+                <div class="project-image">
+                    <img src="assets/huella.jpg" alt="Project 1">
+                </div>
+                <div class="project-info">
+                    <a class="btn">Ver Más...</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+    
+    <!-- Footer with Contact Form -->
+    <footer>
+        <div>
+            <h2 class="titulos">Contactame</h2>
+            
+       </div>
+        <img id ="logo" src="./assets/logoIH3.png" alt="logo">
+        <div>
+            <a href="https://wa.me/123456789" target="_blank" class="whatsapp-icon">
+                <i class="fab fa-whatsapp fa-2x"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/tuperfil" target="_blank" class="linkedin-icon">
+                <i class="fab fa-linkedin fa-2x"></i>
+            </a>
+            <a href="https://github.com/tuusuario" target="_blank" class="github-icon">
+                <i class="fab fa-github fa-2x"></i>
+            </a>
+        </div>
+        <span class="copyright">&copy;2024 Ivan Herrera. All Rights Reserved</span>
     </footer>
 
     <script src="./js/scripts.js"></script>
