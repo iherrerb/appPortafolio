@@ -10,11 +10,11 @@ exports.createReservation = async (req, res) => {
     }
 };
 
-/* exports.getUserReservations = async (req, res) => {
+ exports.getUserReservations = async (req, res) => {
     try {
-        const reservations = await Reservation.find({ usuario_id: req.params.userId });
+        const reservations = await Reservation.find({ email: req.params.email });
         res.status(200).json({ data: reservations });
     } catch (error) {
         res.status(400).json({ error: error.message });
     }
-}; */
+}; 

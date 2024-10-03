@@ -10,7 +10,7 @@ document.getElementById('user-form').addEventListener('submit', async (e) => {
     };
 
     const response = await fetch('http://localhost:3000/users', {
-        method: 'POST',
+        method: 'GET',
         headers: {
             'Content-Type': 'application/json',
         },

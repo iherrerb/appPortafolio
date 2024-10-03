@@ -4,8 +4,7 @@ document.getElementById('contact-form').addEventListener('submit', function(even
     const formData = new FormData(this);
     const data = Object.fromEntries(formData.entries());
 
-    console.log('Datos enviados:', data); // Verificar los datos antes de enviarlos
-
+   
     fetch('/contact', {
         method: 'POST',
         headers: {

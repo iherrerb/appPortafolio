@@ -17,9 +17,9 @@ router.post('/', async (req, res) => {
 router.get('/', async (req, res) => {
     try {
         await Contact.find();
-        res.status(201).json({ message: 'Contacto guardado.' });
+        res.status(201).json({ message: 'se obtuvo el contacto' });
     } catch (error) {
-        res.status(500).json({ message: 'Error al guardar contacto.', error: error.message });
+        res.status(500).json({ message: 'Error al obtener el contactop.', error: error.message });
     }
 });
 
