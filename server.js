@@ -6,6 +6,7 @@ const connectDB = require('./backend/config/db.js'); // Importa la función de c
 const contactRoutes = require('./backend/routes/contactRoutes.js');
 const reservationRoutes = require('./backend/routes/reservationRoutes');
 const userRoutes = require('./backend/routes/userRoutes');
+const authRoutes = require("./backend/routes/auth");
 require('dotenv').config();
 
 const app = express();
@@ -23,6 +24,7 @@ app.use(bodyParser.json());
 app.use('/contact', contactRoutes);
 app.use('/reservations', reservationRoutes);
 app.use('/users', userRoutes);
+app.use("/auth", authRoutes); // Ruta para autenticación
 
 // Iniciar servidor
 app.listen(PORT, () => {
