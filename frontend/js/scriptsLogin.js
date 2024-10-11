@@ -3,14 +3,12 @@ document.getElementById('user-form').addEventListener('submit', async (e) => {
     e.preventDefault();
 
     const data = {
-        nombre: e.target.nombre.value,
         email: e.target.email.value,
-        telefono: e.target.telefono.value,
         password: e.target.password.value,
     };
 
-    const response = await fetch('http://localhost:3000/users', {
-        method: 'GET',
+    const response = await fetch('/auth', {
+        method: 'POST',
         headers: {
             'Content-Type': 'application/json',
         },
